@@ -108,6 +108,36 @@ Choose a build mode before building; the mode is baked into the binary.
 | `dev` | `bun run build:dev` | Contributor/debug build that enables development/internal capability gates. |
 | `internal` | `bun run build:internal` | Internal compatibility spin for Noumena-controlled environments. |
 
+Set the build mode at build time with `NCODE_USER_TYPE`:
+
+```bash
+# Default OSS build (public-safe gates).
+NCODE_USER_TYPE=external bun run build
+
+# Noumena first-party build (enables managed-model aliases, first-party UI
+# surfaces, and other Noumena compatibility features).
+NCODE_USER_TYPE=noumena bun run build
+```
+
+`NCODE_USER_TYPE` is baked into the binary; it controls compile-time feature gates such as `BUILD_SPIN` and `isInternalBuild()`. The `noumena`/`internal`/`dev` spins are not available in an `external` binary without rebuilding.
+
+### Runtime feature switches
+
+Some capabilities are gated at runtime so a single build can expose different behavior without recompiling:
+
+```bash
+# Enables all Noumena first-party/hidden product features that are safe for
+# external users but left off by default (e.g. managed model aliases,
+# first-party UI surfaces, experimental Noumena integrations).
+NCODE_USER_MODE=noumena
+
+# Uses the native OpenAI-compatible WebSocket v2 transport. This is the fastest
+# and most reliable inference path for Noumena-managed models.
+NCODE_OPENAI_COMPAT_WS_V2=1
+```
+
+These can be combined depending on your account type and preferred inference transport. Note that `NCODE_OPENAI_COMPAT_WS_V2` is a runtime switch only — the WS2 native module must already be present in the built binary, which it is for all default build modes.
+
 Explicit package commands are also available:
 
 ```bash
