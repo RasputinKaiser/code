@@ -168,7 +168,7 @@ export function modelSupportsAutoMode(model: string): boolean {
     // External: firstParty-only at launch (PI probes not wired for
     // Bedrock/Vertex/Foundry yet). Checked before allowModels so the GB
     // override can't enable auto mode on unsupported providers.
-    if ((process.env.NCODE_BUILD_MODE !== 'noumena' && process.env.USER_TYPE !== 'ant') && getAPIProvider() !== 'firstParty') {
+    if (!isInternalBuild() && getAPIProvider() !== 'firstParty') {
       return false
     }
     // GrowthBook override: ncode_auto_mode_config.allowModels force-enables
