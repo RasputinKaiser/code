@@ -1,0 +1,16 @@
+{
+  "name": "openai-compat-ws-v2-napi",
+  "version": "0.1.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "cargo build --release && npm run copy-artifacts",
+    "copy-artifacts": "mkdir -p dist && cp target/release/libopenai_compat_ws_v2_napi.so dist/openai-compat-ws-v2-napi.node || true"
+  },
+  "dependencies": {}
+}

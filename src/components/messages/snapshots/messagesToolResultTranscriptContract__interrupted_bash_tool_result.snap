@@ -1,0 +1,7 @@
+---
+source: src/components/messages/messagesToolResultTranscriptContract.test.tsx
+expression: interrupted_bash_tool_result
+---
+❯ show interrupted transcript
+● Bash(sleep 60)
+  ⎿  ■ Conversation interrupted - tell the model what to do

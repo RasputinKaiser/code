@@ -1,0 +1,9 @@
+---
+source: src/components/ResumeTask.renderSnapshot.test.tsx
+expression: session_selection_surface
+---
+ Select a session to resume (noumena/ncode):
+   Updated  Session Title
+ ❯ 1. 2m ago   Weekly bug bash
+   2. 7m ago   Teleport drill
+ ↑/↓ to select · Enter to confirm · Esc to cancel

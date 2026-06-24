@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build-output/
+*.tsbuildinfo
+
+# Temporary/package outputs
+.tmp/
+coverage/
+*.log
+
+# Bun standalone-compile intermediates
+*.bun-build
+
+# Native build outputs
+native/**/target/
+native/**/dist/
+rust/**/target/
+rust/**/dist/
+*.node
+
+# Local editor/system files
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets/config
+.env
+.env.*
+!.env.example
+
+# Test/runtime scratch
+session_123/

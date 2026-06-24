@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+CLI_JS="$SCRIPT_DIR/dist/cli.js"
+DEFAULT_MODEL="GLM 5.2"
+DEFAULT_CONFIG_DIR="$HOME/.config/noumena/ncode"
+DEFAULT_API_KEY_FILE="$DEFAULT_CONFIG_DIR/api_key"
+DEFAULT_PLATFORM_BASE_URL="https://api.noumena.com"
+DEFAULT_OAUTH_WEB_BASE_URL="https://code.noumena.com"
+DEFAULT_PUBLIC_INFERENCE_BASE_URL="https://api.noumena.com"
+DEFAULT_GROWTHBOOK_API_HOST="https://flags.noumena.com"
+DEFAULT_GROWTHBOOK_CLIENT_KEY="sdk-4goZclgHgKG2mtsb"
+
+dispatch_workspace_lifecycle_command() {
+  local helper="$REPO_ROOT/tools/bootstrap/ncode_workspace_cli.sh"
+  case "${1:-}" in
+    create|delete|reap|list) ;;
+    *) return 0 ;;
+  esac
+  if [[ ! -x "$helper" ]]; then
+    echo "Missing ncode workspace lifecycle helper at $helper" >&2
+    exit 1
+  fi
+  exec "$helper" "$@"
+}
+
+resolve_bun_bin() {
+  local explicit_bun_bin="${1:-${BUN_BIN:-}}"
+  local candidate=""
+
+  if [[ -n "$explicit_bun_bin" && -x "$explicit_bun_bin" ]]; then
+    printf '%s\n' "$explicit_bun_bin"
+    return 0
+  fi
+
+  if command -v bun >/dev/null 2>&1; then
+    command -v bun
+    return 0
+  fi
+
+  if command -v getent >/dev/null 2>&1; then
+    candidate="$(getent passwd "$(id -u)" | cut -d: -f6 || true)"
+    if [[ -n "$candidate" && -x "$candidate/.bun/bin/bun" ]]; then
+      printf '%s\n' "$candidate/.bun/bin/bun"
+      return 0
+    fi
+  fi
+
+  candidate="${HOME:-}/.bun/bin/bun"
+  if [[ -n "$candidate" && -x "$candidate" ]]; then
+    printf '%s\n' "$candidate"
+    return 0
+  fi
+
+  return 1
+}
+
+# Keep Noumena Code state isolated from other local tooling and profiles.
+export NCODE_CONFIG_DIR="${NCODE_CONFIG_DIR:-$DEFAULT_CONFIG_DIR}"
+
+# OAuth is browser-bound for NCode. Keep token exchange on the code host so
+# authorize, callback, success, and token endpoints share one public surface.
+export NOUMENA_ISSUER_BASE_URL="${NOUMENA_ISSUER_BASE_URL:-$DEFAULT_OAUTH_WEB_BASE_URL}"
+export NOUMENA_PLATFORM_BASE_URL="${NOUMENA_PLATFORM_BASE_URL:-$DEFAULT_PLATFORM_BASE_URL}"
+export NOUMENA_OAUTH_WEB_BASE_URL="${NOUMENA_OAUTH_WEB_BASE_URL:-$DEFAULT_OAUTH_WEB_BASE_URL}"
+export NOUMENA_GROWTHBOOK_API_HOST="${NOUMENA_GROWTHBOOK_API_HOST:-$DEFAULT_GROWTHBOOK_API_HOST}"
+export NOUMENA_GROWTHBOOK_CLIENT_KEY="${NOUMENA_GROWTHBOOK_CLIENT_KEY:-$DEFAULT_GROWTHBOOK_CLIENT_KEY}"
+# `ncode` is the release-gated Noumena product launcher. Production inference is
+# served by api.noumena.com; code.noumena.com remains the product/code surface.
+export NOUMENA_BASE_URL="${NOUMENA_BASE_URL:-$DEFAULT_PUBLIC_INFERENCE_BASE_URL}"
+export CODE_STREAM_BASE_URL="${CODE_STREAM_BASE_URL:-$NOUMENA_BASE_URL}"
+export NOUMENA_API_KEY_FILE="${NOUMENA_API_KEY_FILE:-$DEFAULT_API_KEY_FILE}"
+if [[ -z "${NOUMENA_API_KEY:-}" && -r "$NOUMENA_API_KEY_FILE" ]]; then
+  NOUMENA_API_KEY="$(<"$NOUMENA_API_KEY_FILE")"
+  export NOUMENA_API_KEY
+fi
+if [[ -n "${NOUMENA_API_KEY:-}" ]]; then
+  export NCODE_REMOTE_RUNTIME_TOKEN_TRANSPORT="${NCODE_REMOTE_RUNTIME_TOKEN_TRANSPORT:-static_api_key_env}"
+fi
+export NCODE_OPENAI_COMPAT_WS_V2="${NCODE_OPENAI_COMPAT_WS_V2:-1}"
+# Keep the staging wrapper in non-fullscreen mode by default so local testing
+# uses normal terminal scrollback/selection unless explicitly opted in.
+export NCODE_NO_FLICKER="${NCODE_NO_FLICKER:-${CLAUDE_CODE_NO_FLICKER:-0}}"
+export CLAUDE_CODE_NO_FLICKER="${CLAUDE_CODE_NO_FLICKER:-$NCODE_NO_FLICKER}"
+
+export NOUMENA_MODEL="${NOUMENA_MODEL:-$DEFAULT_MODEL}"
+export API_TIMEOUT_MS="${API_TIMEOUT_MS:-30000}"
+
+dispatch_workspace_lifecycle_command "$@"
+
+bun_bin="$(resolve_bun_bin "${BUN_BIN:-}" || true)"
+if [[ -z "$bun_bin" ]]; then
+  echo "bun executable not found via BUN_BIN, PATH, login home, or HOME" >&2
+  echo "Set BUN_BIN=/absolute/path/to/bun" >&2
+  exit 127
+fi
+
+if [[ ! -f "$CLI_JS" ]]; then
+  echo "Missing built CLI at $CLI_JS" >&2
+  echo "Run: cd $SCRIPT_DIR && $bun_bin run build" >&2
+  exit 1
+fi
+
+exec "$bun_bin" "$CLI_JS" "$@"

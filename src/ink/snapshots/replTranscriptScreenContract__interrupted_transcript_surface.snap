@@ -1,0 +1,23 @@
+---
+source: src/ink/replTranscriptScreenContract.test.tsx
+expression: interrupted_transcript_surface
+---
+╭─ Code ───────────────────────────────────────────────────╮
+│                                                          │
+│                      Welcome back!                       │
+│                     ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠦⣄⠀⠀⠀⠀⠀                     │
+│                     ⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀                     │
+│                     ⠀⠀⠀⢸⡿⠿⣆⠀⠀⠀⠀⢈⡇⠀⠀⠀                     │
+│                     ⠀⠀⠀⠈⢧⡀⠈⢳⣦⣤⣤⡾⠁⠀⠀⠀                     │
+│                     ⠀⠀⠀⠀⠀⠙⠲⠾⠿⠟⠋⠀⠀⠀⠀⠀                     │
+│                        Sonnet 4.6                        │
+│                    API Usage Billing                     │
+│                  /tmp/noumena-code-oss                   │
+│                                                          │
+╰──────────────────────────────────────────────────────────╯
+❯ show interrupt transcript
+  ⎿  ■ Conversation interrupted - tell the model what to do
+────────────────────────────────────────────────────────────
+  Showing detailed transcript · ctrl+o to toggle · ↑↓ scroll
+   · home/end top/bottom
+◉ Sonnet 4.6 · high  ⌂ /tmp/noumena-code-oss

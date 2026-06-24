@@ -1,0 +1,7 @@
+---
+source: src/components/TeleportResumeWrapper.renderSnapshot.test.tsx
+expression: error_surface
+---
+ Failed to resume session
+ Session expired
+ Press Esc to cancel

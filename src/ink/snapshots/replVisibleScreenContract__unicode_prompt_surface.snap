@@ -1,0 +1,7 @@
+---
+source: src/ink/replVisibleScreenContract.test.tsx
+expression: unicode_prompt_surface
+---
+❯ 😀😀😀😀😀 你好世界
+────────────────────────
+  ◉ Sonnet 4.6 · high…

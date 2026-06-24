@@ -1,0 +1,18 @@
+---
+source: src/components/LogoV2.renderSnapshot.test.tsx
+expression: full_surface
+---
+╭─── Code v0.1.0 ───────────────────────────────────────────────────────╮
+│                                │ Recent activity                      │
+│       Welcome back Nina!       │ No recent activity                   │
+│                                │ ──────────────────────────────────── │
+│        ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠦⣄⠀⠀⠀⠀⠀        │ What's new                           │
+│        ⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀        │ Check the Code changelog for updates │
+│        ⠀⠀⠀⢸⡿⠿⣆⠀⠀⠀⠀⢈⡇⠀⠀⠀        │                                      │
+│        ⠀⠀⠀⠈⢧⡀⠈⢳⣦⣤⣤⡾⠁⠀⠀⠀        │                                      │
+│        ⠀⠀⠀⠀⠀⠙⠲⠾⠿⠟⠋⠀⠀⠀⠀⠀        │                                      │
+│                                │                                      │
+│   Sonnet 4.6 · pro · Noumena   │                                      │
+│     /tmp/noumena-code-oss      │                                      │
+╰───────────────────────────────────────────────────────────────────────╯
+  ↑ Opus now defaults to 1M context · 5x more room, same pricing

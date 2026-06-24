@@ -1,0 +1,7 @@
+---
+source: src/ink/replToolResultMountedContract.test.tsx
+expression: message_row_list_rejected
+---
+❯ show rejected transcript
+● Bash(rm -rf tmp-contract-dir)
+  ⎿  Tool use rejected

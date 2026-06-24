@@ -1,0 +1,7 @@
+---
+source: src/components/messages/messagesToolResultTranscriptContract.test.tsx
+expression: rejected_bash_tool_result
+---
+❯ show rejected transcript
+● Bash(rm -rf tmp-contract-dir)
+  ⎿  Tool use rejected

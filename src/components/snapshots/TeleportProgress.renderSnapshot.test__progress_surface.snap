@@ -1,0 +1,10 @@
+---
+source: src/components/TeleportProgress.renderSnapshot.test.tsx
+expression: progress_surface
+---
+ ◐ Teleporting session…
+ 019db03b-d85e-7863-a6d7-5a1f170035d4
+   ✔ Validating session
+   ✔ Fetching session logs
+   ◐ Getting branch info
+   ◯ Checking out branch

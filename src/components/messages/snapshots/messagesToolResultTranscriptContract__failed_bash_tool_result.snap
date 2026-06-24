@@ -1,0 +1,7 @@
+---
+source: src/components/messages/messagesToolResultTranscriptContract.test.tsx
+expression: failed_bash_tool_result
+---
+❯ show failed transcript
+● Bash(mkdir /root/blocked-dir)
+  ⎿  Error: Error calling tool (Bash): permission denied

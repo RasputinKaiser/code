@@ -1,0 +1,63 @@
+{
+  "fixture_type": "openai_compat_stream_receipt",
+  "source_receipt_path": "/tmp/ncode-auth-relay-test3/dump-prompts/c20c6b56-e95a-4b62-ab8c-0b6a59267bc0.jsonl",
+  "source_response_index": 0,
+  "response": {
+    "type": "response",
+    "timestamp": "2026-04-22T10:39:55.354Z",
+    "data": {
+      "stream": true,
+      "chunks": [
+        {
+          "id": "chatcmpl-3ad31ac4-b601-4fd4-be26-6f0e9c36edfc",
+          "object": "chat.completion.chunk",
+          "created": 1776854395,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-3ad31ac4-b601-4fd4-be26-6f0e9c36edfc",
+          "object": "chat.completion.chunk",
+          "created": 1776854395,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "matched_stop": 163586
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-3ad31ac4-b601-4fd4-be26-6f0e9c36edfc",
+          "object": "chat.completion.chunk",
+          "created": 1776854395,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [],
+          "usage": {
+            "prompt_tokens": 11803,
+            "completion_tokens": 34,
+            "total_tokens": 11837
+          }
+        }
+      ]
+    }
+  }
+}

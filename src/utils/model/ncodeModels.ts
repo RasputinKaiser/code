@@ -1,0 +1,172 @@
+import type { EffortLevel } from '../../entrypoints/sdk/runtimeTypes.js'
+
+export type NCodeManagedModelProfile = {
+  primaryAlias: string
+  aliases: readonly string[]
+  model: string
+  routingModel: string
+  label: string
+  description: string
+  defaultEffortLevel: EffortLevel
+  supportsMaxEffort: boolean
+  // Usable prompt budget exposed to ncode. This is intentionally below the
+  // model/server max sequence length so output, reasoning, and tool-loop
+  // continuations have headroom.
+  contextWindow: number
+  defaultMaxTokens: number
+  upperMaxTokensLimit: number
+  baseUrl: string
+}
+
+export const NCODE_MANAGED_MODEL_MAX_PROMPT_TOKENS = 200_000
+export const NCODE_MANAGED_MODEL_MAX_SEQUENCE_TOKENS = 256_000
+export const NCODE_MANAGED_MODEL_MAX_TOKENS = 256_000
+export const KIMI_2_7_CODER_BASE_URL = 'https://api.noumena.com'
+export const KIMI_2_7_CODER_MODEL = '/data/models/hf/moonshotai__Kimi-K2.7-Code'
+export const GLM_5_2_MODEL = '/data/models/hf/zai-org__GLM-5.2-FP8'
+export const GLM_5_2_1M_MODEL = `${GLM_5_2_MODEL}[1m]`
+export const GLM_5_2_MAX_PROMPT_TOKENS = NCODE_MANAGED_MODEL_MAX_PROMPT_TOKENS
+export const GLM_5_2_MAX_SEQUENCE_TOKENS = NCODE_MANAGED_MODEL_MAX_SEQUENCE_TOKENS
+export const GLM_5_2_1M_MAX_PROMPT_TOKENS = 1_000_000
+export const GLM_5_2_1M_MAX_TOKENS = NCODE_MANAGED_MODEL_MAX_TOKENS
+export const DEEPSEEK_V4_FLASH_MODEL =
+  '/data/models/hf/deepseek-ai__DeepSeek-V4-Flash'
+export const DEEPSEEK_V4_FLASH_MAX_PROMPT_TOKENS = 1_000_000
+
+// K2.6 is internal-only and not available in public/OSS builds. Keep both the
+// model identifier and base URL out of the public profile list; configure them
+// through internal deployment/runtime configuration only.
+
+export const NCODE_MANAGED_MODEL_PROFILES = [
+  {
+    primaryAlias: 'kimi-2.7-coder',
+    aliases: [
+      'kimi 2.7 coder',
+      'kimi-2.7-coder',
+      'kimi-2.7',
+      'k2.7',
+      'kimi-coder',
+    ] as const,
+    model: KIMI_2_7_CODER_MODEL,
+    routingModel: 'kimi-k25',
+    label: 'Kimi 2.7 Coder',
+    description: 'Production coding model with thinking support',
+    defaultEffortLevel: 'high',
+    supportsMaxEffort: false,
+    contextWindow: NCODE_MANAGED_MODEL_MAX_PROMPT_TOKENS,
+    defaultMaxTokens: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    upperMaxTokensLimit: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    baseUrl: KIMI_2_7_CODER_BASE_URL,
+  },
+  {
+    primaryAlias: 'glm-5.2[1m]',
+    aliases: [
+      'glm52[1m]',
+      'glm-5.2[1m]',
+      'glm 5.2[1m]',
+      'glm-5.2-fp8[1m]',
+      'glm52-fp8[1m]',
+      'zai-org/glm-5.2-fp8[1m]',
+      'zai-org__glm-5.2-fp8[1m]',
+    ] as const,
+    model: GLM_5_2_1M_MODEL,
+    routingModel: 'glm52-1m',
+    label: 'GLM 5.2 [1M]',
+    description: 'Production GLM 5.2 coding model with 1M context',
+    defaultEffortLevel: 'high',
+    supportsMaxEffort: false,
+    contextWindow: GLM_5_2_1M_MAX_PROMPT_TOKENS,
+    defaultMaxTokens: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    upperMaxTokensLimit: GLM_5_2_1M_MAX_TOKENS,
+    baseUrl: KIMI_2_7_CODER_BASE_URL,
+  },
+  {
+    primaryAlias: 'glm-5.2',
+    aliases: [
+      'glm52',
+      'glm-5.2',
+      'glm 5.2',
+      'glm-5.2-fp8',
+      'glm52-fp8',
+    ] as const,
+    model: GLM_5_2_MODEL,
+    routingModel: 'glm52',
+    label: 'GLM 5.2',
+    description: 'Production GLM 5.2 coding model',
+    defaultEffortLevel: 'high',
+    supportsMaxEffort: false,
+    contextWindow: GLM_5_2_MAX_PROMPT_TOKENS,
+    defaultMaxTokens: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    upperMaxTokensLimit: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    baseUrl: KIMI_2_7_CODER_BASE_URL,
+  },
+  {
+    primaryAlias: 'deepseek-v4-flash',
+    aliases: [
+      'deepseek v4 flash',
+      'deepseek-v4-flash',
+      'dsv4-flash',
+      'ds-v4-flash',
+      'v4-flash',
+    ] as const,
+    model: DEEPSEEK_V4_FLASH_MODEL,
+    routingModel: 'dsv4-flash',
+    label: 'DeepSeek V4 Flash',
+    description: 'Production DeepSeek V4 Flash coding model',
+    defaultEffortLevel: 'high',
+    supportsMaxEffort: false,
+    contextWindow: DEEPSEEK_V4_FLASH_MAX_PROMPT_TOKENS,
+    defaultMaxTokens: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    upperMaxTokensLimit: NCODE_MANAGED_MODEL_MAX_TOKENS,
+    baseUrl: KIMI_2_7_CODER_BASE_URL,
+  },
+] as const satisfies readonly NCodeManagedModelProfile[]
+
+export const NCODE_MANAGED_MODEL_ALIASES: readonly string[] =
+  NCODE_MANAGED_MODEL_PROFILES.flatMap(profile => [...profile.aliases])
+
+export function isNCodeManagedModelAlias(model: string): boolean {
+  const normalized = model.trim().toLowerCase()
+  return NCODE_MANAGED_MODEL_ALIASES.includes(normalized)
+}
+
+export function resolveNCodeManagedModel(
+  model: string | undefined,
+): NCodeManagedModelProfile | undefined {
+  if (!model) return undefined
+  const normalized = model.trim().toLowerCase()
+  const exactMatch = NCODE_MANAGED_MODEL_PROFILES.find(profile => {
+    if (normalized === profile.model.toLowerCase()) return true
+    if ((profile.aliases as readonly string[]).includes(normalized)) return true
+    return false
+  })
+  if (exactMatch) return exactMatch
+
+  return NCODE_MANAGED_MODEL_PROFILES.find(profile => {
+    return normalized.includes(profile.model.toLowerCase())
+  })
+}
+
+export function getNCodeManagedModelOptions(): Array<{
+  value: string
+  label: string
+  description: string
+  descriptionForModel: string
+}> {
+  return NCODE_MANAGED_MODEL_PROFILES.map(profile => ({
+    value: profile.primaryAlias,
+    label: profile.label,
+    description: profile.description,
+    descriptionForModel: `${profile.description} (${profile.model})`,
+  }))
+}
+
+export function getNCodeManagedModelBaseUrl(
+  model: string | undefined,
+): string | undefined {
+  const profile = resolveNCodeManagedModel(model)
+  if (!profile) {
+    return undefined
+  }
+  return profile.baseUrl
+}

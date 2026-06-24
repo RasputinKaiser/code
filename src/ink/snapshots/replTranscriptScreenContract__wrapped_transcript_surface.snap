@@ -1,0 +1,27 @@
+---
+source: src/ink/replTranscriptScreenContract.test.tsx
+expression: wrapped_transcript_surface
+---
+│           ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠦⣄⠀⠀⠀⠀⠀           │
+│           ⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀           │
+│           ⠀⠀⠀⢸⡿⠿⣆⠀⠀⠀⠀⢈⡇⠀⠀⠀           │
+│           ⠀⠀⠀⠈⢧⡀⠈⢳⣦⣤⣤⡾⠁⠀⠀⠀           │
+│           ⠀⠀⠀⠀⠀⠙⠲⠾⠿⠟⠋⠀⠀⠀⠀⠀           │
+│              Sonnet 4.6              │
+│          API Usage Billing           │
+│        /tmp/noumena-code-oss         │
+│                                      │
+╰──────────────────────────────────────╯
+❯ show transcript
+            <synthetic-time>
+● Years passed, and Willowmere thrived
+  in peace and friendship. Mira's herb
+  garden flourished with both ordinary
+  and enchanted plants, and travelers
+  spoke of the kindness of the woman who
+   tended them.
+────────────────────────────────────────
+  Showing detailed transcript · ctrl+o
+  to toggle · ↑↓ scroll · home/end
+  top/bottom
+◉ Sonnet 4.6 · high  ⌂ /tmp/noumena-cod…

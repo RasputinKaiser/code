@@ -1,0 +1,17 @@
+{
+  "name": "markdown-renderer-napi",
+  "version": "0.1.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "cargo build --release && npm run copy-artifacts",
+    "copy-artifacts": "mkdir -p dist && cp target/release/libmarkdown_renderer_napi.so dist/markdown-renderer-napi.node || true"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,24 @@
+---
+source: src/ink/replToolTranscriptScreenContract.test.tsx
+expression: bash_done_surface
+---
+╭─ Code ───────────────────────────────────────────────────╮
+│                                                          │
+│                      Welcome back!                       │
+│                     ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠦⣄⠀⠀⠀⠀⠀                     │
+│                     ⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀                     │
+│                     ⠀⠀⠀⢸⡿⠿⣆⠀⠀⠀⠀⢈⡇⠀⠀⠀                     │
+│                     ⠀⠀⠀⠈⢧⡀⠈⢳⣦⣤⣤⡾⠁⠀⠀⠀                     │
+│                     ⠀⠀⠀⠀⠀⠙⠲⠾⠿⠟⠋⠀⠀⠀⠀⠀                     │
+│                        Sonnet 4.6                        │
+│                    API Usage Billing                     │
+│                  /tmp/noumena-code-oss                   │
+│                                                          │
+╰──────────────────────────────────────────────────────────╯
+❯ show no output transcript
+● Bash(mkdir tmp-contract-dir)
+  ⎿  Done
+────────────────────────────────────────────────────────────
+  Showing detailed transcript · ctrl+o to toggle · ↑↓ scroll
+   · home/end top/bottom
+◉ Sonnet 4.6 · high  ⌂ /tmp/noumena-code-oss

@@ -1,0 +1,4823 @@
+{
+  "fixture_type": "openai_compat_stream_receipt",
+  "source_receipt_path": "/tmp/ncode-auth-relay-test3/dump-prompts/09f6a73a-c14f-4253-8635-539d23d3d07a.jsonl",
+  "source_response_index": 0,
+  "response": {
+    "type": "response",
+    "timestamp": "2026-04-23T00:00:00.000Z",
+    "data": {
+      "stream": true,
+      "chunks": [
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "id": "functions.Agent:0",
+                    "type": "function",
+                    "function": {
+                      "name": "Agent"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "{\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "name"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\":"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " URLs"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "description"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\":"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Search"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " for"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " URLs"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " usage"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "prompt"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\":"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Search"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " the"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " codebase"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " for"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " references"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " to"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " URLs"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\\"."
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " This"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " is"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " a"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " specific"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " identifier"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " or"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " feature"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " name"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "."
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " I"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " need"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " to"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " find"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": ":\\"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "1"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "."
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Where"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " this"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " is"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " defined"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " or"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " referenced"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " in"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " the"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " code"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "2"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "."
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Any"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " configuration"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": ","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " environment"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " variables"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": ","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " or"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " constants"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " related"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " to"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " it"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "3"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "."
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Where"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " in"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " production"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " code"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " paths"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " these"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " URLs"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " are"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " actually"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " used"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Search"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " thoroughly"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " through"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " the"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " codebase"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "."
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Look"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " for"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": ":\\"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "-"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " The"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " exact"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " string"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " URLs"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\\"\\"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "-"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Related"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " terms"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " like"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\\","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\\","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "urls"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\\","
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " \\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "URL"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " in"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " configuration"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " files"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "-"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Any"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " environment"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " variable"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " or"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " constant"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " that"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " might"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " reference"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " endpoints"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "-"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Comments"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " or"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " documentation"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " mentioning"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " legacy"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " Anth"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "ropic"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " URLs"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "\\n"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "Report"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " back"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " the"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " specific"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " file"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " paths"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " and"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " line"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " numbers"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " where"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " this"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " is"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " used"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " in"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " production"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " code"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": " paths"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": ".\""
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "index": 0,
+                    "function": {
+                      "arguments": "}"
+                    }
+                  }
+                ],
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "reasoning_content": null
+              },
+              "logprobs": null,
+              "finish_reason": "tool_calls",
+              "matched_stop": 163586
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-03175b66-8205-4fc2-88c5-f3a0b2de7399",
+          "object": "chat.completion.chunk",
+          "created": 1776951345,
+          "model": "/data/models/hf/moonshotai__Kimi-K2.7-Code",
+          "system_fingerprint": "default",
+          "choices": [],
+          "usage": {
+            "prompt_tokens": 7837,
+            "completion_tokens": 192,
+            "total_tokens": 8029
+          }
+        }
+      ]
+    }
+  }
+}

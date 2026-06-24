@@ -1,0 +1,7 @@
+---
+source: src/ink/replToolResultMountedContract.test.tsx
+expression: message_row_list_interrupted
+---
+❯ show interrupted transcript
+● Bash(sleep 60)
+  ⎿  ■ Conversation interrupted - tell the model what to do

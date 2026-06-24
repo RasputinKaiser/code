@@ -1,0 +1,20 @@
+---
+source: src/components/ThemePicker.renderSnapshot.test.tsx
+expression: onboarding_surface
+---
+ Let's get started.
+ Choose the text style that looks best with your terminal
+ To change this later, run /theme
+ ❯ 1. Dark mode ✔
+   2. Light mode
+   3. Dark mode (colorblind-friendly)
+   4. Light mode (colorblind-friendly)
+   5. Dark mode (ANSI colors only)
+   6. Light mode (ANSI colors only)
+ ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+  1function greet() {
+  2  console.log("Hello, World!");
+  2  console.log("Hello, Code!");
+  3}
+ ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+  Syntax theme: Monokai Extended (ctrl+t to disable)

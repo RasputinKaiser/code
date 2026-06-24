@@ -1,0 +1,22 @@
+---
+source: src/ink/replVisibleScreenContract.test.tsx
+expression: startup_welcome_surface
+---
+╭─── Code v0.0.0-test ─────────────────────────────────────────────────────────╮
+│                                    │ Tips for getting started                │
+│            Welcome back!           │ Run /init to create project instructio… │
+│                                    │ ─────────────────────────────────────── │
+│          ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠦⣄⠀⠀⠀⠀⠀          │ Recent activity                         │
+│          ⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀          │ No recent activity                      │
+│          ⠀⠀⠀⢸⡿⠿⣆⠀⠀⠀⠀⢈⡇⠀⠀⠀          │                                         │
+│          ⠀⠀⠀⠈⢧⡀⠈⢳⣦⣤⣤⡾⠁⠀⠀⠀          │                                         │
+│          ⠀⠀⠀⠀⠀⠙⠲⠾⠿⠟⠋⠀⠀⠀⠀⠀          │                                         │
+│                                    │                                         │
+│   Sonnet 4.6 · API Usage Billing   │                                         │
+│       /tmp/noumena-code-oss        │                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+                                                               ● high · /effort
+────────────────────────────────────────────────────────────────────────────────
+❯
+────────────────────────────────────────────────────────────────────────────────
+  ◉ Sonnet 4.6 · high  ⌂ /tmp/noumena-code-oss

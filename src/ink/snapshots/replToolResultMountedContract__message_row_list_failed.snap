@@ -1,0 +1,7 @@
+---
+source: src/ink/replToolResultMountedContract.test.tsx
+expression: message_row_list_failed
+---
+❯ show failed transcript
+● Bash(mkdir /root/blocked-dir)
+  ⎿  Error: Error calling tool (Bash): permission denied
