@@ -794,7 +794,7 @@ export function REPL({
   // eslint-disable-next-line prefer-const
   let trySuggestBgPRIntercept = SUGGEST_BG_PR_NOOP;
   trySuggestBgPRIntercept = (prevInput, nextInput) => {
-    if ((process.env.NCODE_BUILD_MODE !== 'noumena' && process.env.USER_TYPE !== 'ant')) {
+    if (!isInternalBuild()) {
       return false;
     }
     const wasPrefixed = parseBackgroundPRShortcutInput(prevInput) !== null;
