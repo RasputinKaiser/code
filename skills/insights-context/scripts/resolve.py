@@ -149,9 +149,21 @@ def parse_memory_file(path):
 
     # Use the LAST ISO date in text — memory files describe the problem first
     # (issue date) then the fix, so the last date is the most reliable proxy
-    # for when the fix landed.
+    # for when the fix landed. However, when a date is explicitly tied to a
+    # fix/resolve/patch keyword in nearby prose, prefer that over the naive
+    # last-position heuristic — "originally seen 2023-12-15, fixed 2024-01-01"
+    # would otherwise pick the seen-date when the prose order is reversed.
     all_dates = re.findall(r"\b(\d{4}-\d{2}-\d{2})\b", text)
     fixed_at = all_dates[-1] if all_dates else None
+    if all_dates:
+        fix_context_re = re.compile(
+            r"(?i)(fixed|fixes|resolved|resolves|patched|repaired|landed|merged|shipped)"
+            r"[^\d]{0,40}(\d{4}-\d{2}-\d{2})"
+        )
+        context_dates = [m.group(2) for m in fix_context_re.finditer(text)]
+        if context_dates:
+            # Latest date explicitly anchored to a fix-keyword wins.
+            fixed_at = sorted(context_dates)[-1]
 
     # For project_* memories (non-feedback), these are context/condition notes,
     # not necessarily fixes. Mark them as contextual-unless-they-clearly-describe-a-fix.
@@ -192,7 +204,12 @@ def parse_git_log(repo, since="30 days ago"):
     for entry in out.split("---\n"):
         entry = entry.strip()
         if not entry: continue
+        # Git pads the body separator with a newline when the body is empty,
+        # so a 4-field split (no body) used to be skipped as "len < 5". Pad
+        # the body to empty so fix commits with no body still classify.
         parts = entry.split("\t", 4)
+        if len(parts) == 4:
+            parts.append("")
         if len(parts) < 5: continue
         _full, short_hash, author_date, subject, body = parts
         if not re.match(r"^(fix|hotfix|patch|repair|resolve)", subject, re.I):

@@ -128,24 +128,42 @@ def cross_reference(scan, resolved):
         f_paths, f_commits, f_symbols = _topic_aggregate_signal(items)
         f_bucket_toks = _bucket_tokens(topic_name)
 
+        # Collect ALL matching resolved entries before deciding — breaking on
+        # the first match silently downgrades the classifier. If an early match
+        # has fixed_at=None (common for memory files without ISO dates) the
+        # loop would break before reaching a later entry with a real fix date
+        # that would have classified the friction as RESOLVED. We prefer a
+        # dated match; among equally-dated matches, the strongest signal wins.
         matched = None
+        matched_rank = -1
         for r in resolved:
             r_paths, r_commits, r_symbols = _resolved_signal(r)
+            rank = -1
             # Highest confidence: exact commit hash overlap
             if f_commits and r_commits and (f_commits & r_commits):
-                matched = r; break
+                rank = 3
             # High confidence: >=1 shared file path
-            if f_paths and r_paths and (f_paths & r_paths):
-                matched = r; break
+            elif f_paths and r_paths and (f_paths & r_paths):
+                rank = 2
             # Weak signal: >=2 shared symbols AND bucket shares a token with
             # the resolved topic — corroboration required so common code symbols
             # don't false-match unrelated fixes.
-            if f_symbols and r_symbols:
+            elif f_symbols and r_symbols:
                 shared_syms = f_symbols & r_symbols
                 if len(shared_syms) >= 2:
                     r_topic_toks = _bucket_tokens(r.get("topic",""))
                     if f_bucket_toks and r_topic_toks and (f_bucket_toks & r_topic_toks):
-                        matched = r; break
+                        rank = 1
+            if rank < 0:
+                continue
+            # Prefer entries with a real fix date (so they can be classified
+            # pre/post-fix). Among same-date-or-same-state entries prefer the
+            # strongest signal rank.
+            r_has_date = bool(parse_date(r.get("fixed_at")))
+            key = (1 if r_has_date else 0, rank)
+            if matched is None or key > matched_rank:
+                matched = r
+                matched_rank = key
 
         last_seen = items[-1]["ts"] if items else None
 
