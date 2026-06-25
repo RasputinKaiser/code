@@ -317,7 +317,7 @@ function isBeingDebugged() {
 }
 
 // Exit if we detect node debugging or inspection
-if ((process.env.NCODE_BUILD_MODE !== 'noumena' && process.env.USER_TYPE !== 'ant') && isBeingDebugged()) {
+if (!isInternalBuild() && isBeingDebugged()) {
   // Use process.exit directly here since we're in the top-level code before imports
   // and gracefulShutdown is not yet available
   // eslint-disable-next-line custom-rules/no-top-level-side-effects
