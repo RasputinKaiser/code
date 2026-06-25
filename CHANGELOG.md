@@ -9,6 +9,8 @@ See [RELEASING.md](./RELEASING.md) for the release process and version-bump poli
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-06-25
+
 ### Added
 
 - GitHub Actions now build, attest, and publish Linux and macOS release artifacts from version tags on `main`.
@@ -73,5 +75,6 @@ See [RELEASING.md](./RELEASING.md) for the release process and version-bump poli
 
 Initial OSS export of Noumena Code.
 
-[Unreleased]: https://github.com/Noumena-Network/code/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/Noumena-Network/code/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/Noumena-Network/code/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Noumena-Network/code/releases/tag/v0.1.0
