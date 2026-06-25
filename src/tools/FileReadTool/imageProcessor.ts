@@ -1,5 +1,6 @@
 import type { Buffer } from 'buffer'
 import { isInBundledMode } from '../../utils/bundledMode.js'
+import { logForDebugging } from '../../utils/debug.js'
 
 export type SharpInstance = {
   metadata(): Promise<{ width: number; height: number; format: string }>
@@ -58,8 +59,10 @@ export async function getImageProcessor(): Promise<SharpFunction> {
         imageProcessorModule = { default: sharp }
         return sharp
       }
-    } catch {
-      // Fall through to sharp below.
+    } catch (error) {
+      logForDebugging(
+        `[image] image-processor-napi load failed, falling back to sharp: ${error instanceof Error ? error.message : String(error)}`,
+      )
     }
 
     // Fall back to sharp if native module is unavailable or stubbed.
