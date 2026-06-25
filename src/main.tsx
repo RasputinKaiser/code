@@ -8,6 +8,7 @@
 //    (~65ms on every macOS startup)
 import { profileCheckpoint, profileReport } from './utils/startupProfiler.js';
 import { cliPrintError, cliPrintWarn } from './utils/cliOutput.js';
+import { swallow } from './utils/swallow.js';
 
 // eslint-disable-next-line custom-rules/no-top-level-side-effects
 profileCheckpoint('main_tsx_entry');
@@ -2015,8 +2016,8 @@ async function run(): Promise<CommanderCommand> {
     const agentDefsPromise = worktreeEnabled || deferHeadlessCommandAndAgentLoad ? null : getAgentDefinitionsWithOverrides(preSetupCwd);
     // Suppress transient unhandledRejection if these reject during the
     // ~28ms setupPromise await before Promise.all joins them below.
-    commandsPromise?.catch(() => {});
-    agentDefsPromise?.catch(() => {});
+    swallow(commandsPromise ?? Promise.resolve(), 'pre-setup commands fetch');
+    swallow(agentDefsPromise ?? Promise.resolve(), 'pre-setup agent defs fetch');
     await setupPromise;
     logForDebugging(`[STARTUP] setup() completed in ${Date.now() - setupStart}ms`);
     profileCheckpoint('action_after_setup');
@@ -2115,8 +2116,8 @@ async function run(): Promise<CommanderCommand> {
     const agentDefsReadyPromise = deferHeadlessCommandAndAgentLoad
       ? null
       : agentDefsPromise ?? getAgentDefinitionsWithOverrides(currentCwd);
-    commandsReadyPromise?.catch(() => {});
-    agentDefsReadyPromise?.catch(() => {});
+    swallow(commandsReadyPromise ?? Promise.resolve(), 'commands ready fetch');
+    swallow(agentDefsReadyPromise ?? Promise.resolve(), 'agent defs ready fetch');
     let commands: Command[] = [];
     let agentDefinitionsResult: Awaited<ReturnType<typeof getAgentDefinitionsWithOverrides>> = {
       activeAgents: [],
@@ -2529,7 +2530,7 @@ async function run(): Promise<CommanderCommand> {
     const hookMessages: Awaited<NonNullable<typeof hooksPromise>> = [];
     // Suppress transient unhandledRejection — the prefetch warms the
     // memoized connectToServer cache but nobody awaits it in interactive.
-    mcpPromise.catch(() => {});
+    swallow(mcpPromise, 'interactive MCP server connect');
     const mcpClients: Awaited<typeof mcpPromise>['clients'] = [];
     const mcpTools: Awaited<typeof mcpPromise>['tools'] = [];
     const mcpCommands: Awaited<typeof mcpPromise>['commands'] = [];
@@ -2690,7 +2691,7 @@ async function run(): Promise<CommanderCommand> {
       // Suppress transient unhandledRejection if this rejects before
       // loadInitialMessages awaits it. Downstream await still observes the
       // rejection — this just prevents the spurious global handler fire.
-      sessionStartHooksPromise?.catch(() => {});
+      swallow(sessionStartHooksPromise ?? Promise.resolve(), 'session start hooks');
       profileCheckpoint('before_validateForceLoginOrg');
       // Validate org restriction for non-interactive sessions
       const orgValidation = await validateForceLoginOrgForCurrentSession();
@@ -2863,7 +2864,7 @@ async function run(): Promise<CommanderCommand> {
             for (const c of headlessStore.getState().mcp.clients) {
               if (!suppressed.has(c.name) || c.type !== 'connected') continue;
               c.client.onclose = undefined;
-              void clearServerCache(c.name, c.config).catch(() => {});
+              swallow(clearServerCache(c.name, c.config), `clear MCP server cache ${c.name}`);
             }
             headlessStore.setState(prev => {
               let {
