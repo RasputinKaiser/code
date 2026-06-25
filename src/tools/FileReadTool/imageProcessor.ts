@@ -1,5 +1,6 @@
 import type { Buffer } from 'buffer'
 import { isInBundledMode } from '../../utils/bundledMode.js'
+import { cliPrintWarn } from '../../utils/cliOutput.js'
 import { logForDebugging } from '../../utils/debug.js'
 
 export type SharpInstance = {
@@ -66,8 +67,7 @@ export async function getImageProcessor(): Promise<SharpFunction> {
     }
 
     // Fall back to sharp if native module is unavailable or stubbed.
-    // biome-ignore lint/suspicious/noConsole: intentional warning
-    console.warn(
+    cliPrintWarn(
       'Native image processor not available, falling back to sharp',
     )
   }
