@@ -3551,7 +3551,9 @@ export function REPL({
     return () => {
       void diagnosticTracker.shutdown();
     };
-    // TODO: fix this
+    // Mount-once effect: onInit and diagnosticTracker are stable refs
+    // (useRef-backed), so [] deps is intentional — we don't want to re-init
+    // when the callbacks' identities change.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
