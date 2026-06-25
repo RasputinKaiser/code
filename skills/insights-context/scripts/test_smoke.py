@@ -15,18 +15,51 @@ to cwd). When that repo contains a fix commit touching OnDemandVerificationStore
 dated after 2026-06-20, the matcher should classify the fixture friction as RESOLVED.
 Override INSIGHTS_TEST_REPO and INSIGHTS_TEST_MEMORY to run against any project.
 """
-import json, os, subprocess, sys, tempfile
+import json, os, subprocess, sys, tempfile, shutil, atexit
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 FIXTURES = HERE / "test_fixtures"
+
+# Synthesize a self-contained git repo with a fix commit touching
+# OnDemandVerificationStore.swift, so the matcher has something real to
+# cross-reference against. The previous default (cwd) relied on the host repo
+# happening to contain that file — which made the test pass for accidental
+# reasons on one machine and fail everywhere else. The fixture's friction ts
+# is 2026-06-20; the synthetic fix commit is dated 2026-06-22 so the
+# classifier should bucket the friction as RESOLVED (pre-fix).
+_REPO_TMP = tempfile.mkdtemp(prefix="insights-smoke-repo-")
+_FIX_DATE = "2026-06-22"
+_FIX_FILE = "Sources/StorageScope/Stores/OnDemandVerificationStore.swift"
+_fix_dir = os.path.join(_REPO_TMP, os.path.dirname(_FIX_FILE))
+os.makedirs(_fix_dir, exist_ok=True)
+_fixture_repo_cmd = lambda *args: subprocess.run(
+    ["git", "-C", _REPO_TMP, *args], capture_output=True, text=True)
+_fixture_repo_cmd("init", "-q")
+_fixture_repo_cmd("config", "user.email", "smoke@example.invalid")
+_fixture_repo_cmd("config", "user.name", "insights smoke")
+# Initial commit with a stub version of the file (pre-fix baseline).
+with open(os.path.join(_REPO_TMP, _FIX_FILE), "w") as _f:
+    _f.write("// OnDemandVerificationStore\n")
+_fixture_repo_cmd("add", _FIX_FILE)
+_fixture_repo_cmd("commit", "-q", "-m", "Add OnDemandVerificationStore baseline",
+                  "--date=2026-06-19T00:00:00")
+# Fix commit dated AFTER the fixture friction (2026-06-20) so the matcher
+# classifies the fixture friction as RESOLVED.
+with open(os.path.join(_REPO_TMP, _FIX_FILE), "w") as _f:
+    _f.write("// OnDemandVerificationStore\n// fixed: cancellation re-verify loop\n")
+_fixture_repo_cmd("add", _FIX_FILE)
+_fixture_repo_cmd("commit", "-q", "-m",
+                  "fix: resolve cancellation re-verify loop in OnDemandVerificationStore",
+                  f"--date={_FIX_DATE}T00:00:00")
 
 # Defaults are project-agnostic so the test file itself can ship without
 # leaking the maintainer's repo path or identity tokens. Override both via
 # env when running against a real repo:
 #   INSIGHTS_TEST_REPO       — a project repo dir (for git-log harvesting)
 #   INSIGHTS_TEST_MEMORY     — that project's NCode memory dir
-REPO = os.environ.get("INSIGHTS_TEST_REPO", str(Path.cwd()))
+REPO = os.environ.get("INSIGHTS_TEST_REPO", _REPO_TMP)
+atexit.register(lambda: shutil.rmtree(_REPO_TMP, ignore_errors=True))
 MEMORY_DIR = os.environ.get(
     "INSIGHTS_TEST_MEMORY",
     str(Path.home() / ".ncode" / "projects"

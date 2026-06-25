@@ -9,7 +9,7 @@ resolver can cross-reference by real signal, not just the bucket label.
 """
 import json, sys, os, re, time
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from collections import Counter, defaultdict
 
 project = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
@@ -123,6 +123,13 @@ REDACT_PATTERNS = [
     (re.compile(r"xox[baprs]-[A-Za-z0-9\-]+", re.I), "<redacted-slack-token>"),
     (re.compile(r"(?i)(password|passwd|secret|token|api[_-]?key)\s*[:=]\s*\S+"),
      r"\1=<redacted>"),
+    # Bare-token form in tracebacks / error strings: an identifier keyword
+    # followed by whitespace and a long opaque value (no =/: separator).
+    # Catches `ValueError: invalid api_key abc123def456` that the =/: form above
+    # misses. Requires a 12+ char alnum value so ordinary prose doesn't match.
+    (re.compile(r"(?i)\b(api[_-]?key|api[_-]?secret|access[_-]?token|"
+                 r"auth[_-]?token|secret[_-]?key)\s+([A-Za-z0-9_\-]{12,})"),
+     r"\1=<redacted>"),
     (re.compile(r"gh[pousr]_[A-Za-z0-9]{36,}"), "<redacted-github-token>"),
     # GitHub identity: the noreply email form (numeric-id+handle@users.noreply.github.com)
     # links the public handle to a private numeric user ID and appears in git config
@@ -190,8 +197,17 @@ IDENTIFIER_RE = re.compile(r"\b([A-Z][a-zA-Z0-9]{4,40})\b")
 
 def parse_ts(s):
     if not s: return None
-    try: return datetime.fromisoformat(s.replace("Z","+00:00"))
-    except (ValueError, TypeError): return None
+    try:
+        d = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        return None
+    # Normalize to naive UTC so aware and naive timestamps are always
+    # comparable via subtraction. Mixed-tz arithmetic raises TypeError on
+    # Python 3.11+ and would abort the whole scan on a single aware timestamp
+    # in an otherwise-naive stream.
+    if d.tzinfo is not None:
+        d = d.astimezone(timezone.utc).replace(tzinfo=None)
+    return d
 
 for f in to_scan:
     sessions_seen.add(f.name)
@@ -424,11 +440,21 @@ for f in to_scan:
                             for c in content
                         )
                     content_str = str(content) if content else ""
+                    # Avoid matching "no error", "error: none", "0 errors" that
+                    # appear in successful tool results. Word-bound the "error:"
+                    # marker and strip the negations first.
+                    content_lower = content_str.lower()
+                    negated = bool(re.search(
+                        r"\b(no|0|zero|none)\s+errors?\b|^error:\s*none\b",
+                        content_lower, re.MULTILINE))
+                    err_indicator = (
+                        "traceback" in content_lower
+                        or "failed with code" in content_lower
+                        or bool(re.search(r"(?m)^\s*error:", content_str))
+                        or bool(re.search(r"\berror:\s*\S", content_str))
+                    )
                     is_err = (block.get("is_error")
-                              or "Error:" in content_str
-                              or "Traceback" in content_str
-                              or "failed with code" in content_str
-                              or "error:" in content_str.lower())
+                              or (err_indicator and not negated))
                     if is_err:
                         tool_failure[tool] = tool_failure.get(tool, 0) + 1
                         if tool == burst_tool:
