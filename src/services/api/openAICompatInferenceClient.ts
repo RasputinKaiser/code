@@ -609,6 +609,104 @@ function convertAssistantContent(content: unknown): Array<Record<string, unknown
   ]
 }
 
+/**
+ * Strips tool_use blocks with empty/blank names from assistant messages and
+ * removes their matching tool_result blocks from subsequent user messages.
+ *
+ * GLM-5.2 (and potentially other models) occasionally emit a tool call with
+ * name: "" which the harness correctly rejects as "Tool not found", but the
+ * malformed call and its error result remain in history. Every subsequent
+ * request carries this poisoned history, causing the API to reject with 400
+ * and creating an unrecoverable loop. This sanitizer is a defensive step that
+ * runs on every request regardless of model or provider.
+ */
+function sanitizeMessagesForMalformedToolCalls(messages: unknown): unknown {
+  if (!Array.isArray(messages)) return messages
+
+  const orphanedIds = new Set<string>()
+  const result: unknown[] = []
+
+  for (const message of messages) {
+    if (
+      !message ||
+      typeof message !== 'object' ||
+      !('role' in message) ||
+      !('content' in message)
+    ) {
+      result.push(message)
+      continue
+    }
+
+    const msg = message as {
+      role: unknown
+      content: unknown
+      [key: string]: unknown
+    }
+
+    if (msg.role === 'assistant' && Array.isArray(msg.content)) {
+      const filteredContent = msg.content.filter((block: unknown) => {
+        if (
+          block &&
+          typeof block === 'object' &&
+          'type' in block &&
+          (block as { type: unknown }).type === 'tool_use' &&
+          'name' in block &&
+          typeof (block as { name: unknown }).name === 'string' &&
+          (block as { name: string }).name.trim() === ''
+        ) {
+          if (
+            'id' in block &&
+            typeof (block as { id: unknown }).id === 'string'
+          ) {
+            orphanedIds.add((block as { id: string }).id)
+          }
+          return false
+        }
+        return true
+      })
+
+      if (filteredContent.length === 0) {
+        continue
+      }
+
+      result.push({ ...msg, content: filteredContent })
+      continue
+    }
+
+    if (
+      msg.role === 'user' &&
+      Array.isArray(msg.content) &&
+      orphanedIds.size > 0
+    ) {
+      const filteredContent = msg.content.filter((block: unknown) => {
+        if (
+          block &&
+          typeof block === 'object' &&
+          'type' in block &&
+          (block as { type: unknown }).type === 'tool_result' &&
+          'tool_use_id' in block &&
+          typeof (block as { tool_use_id: unknown }).tool_use_id === 'string' &&
+          orphanedIds.has((block as { tool_use_id: string }).tool_use_id)
+        ) {
+          return false
+        }
+        return true
+      })
+
+      if (filteredContent.length === 0) {
+        continue
+      }
+
+      result.push({ ...msg, content: filteredContent })
+      continue
+    }
+
+    result.push(message)
+  }
+
+  return result
+}
+
 function convertMessages(
   system: unknown,
   messages: unknown,
@@ -837,7 +935,10 @@ export function buildOpenAICompatChatRequest(
       : undefined
   const convertedTools = convertTools(params.tools)
   const convertedToolChoice = convertToolChoice(params.tool_choice)
-  const convertedMessages = convertMessages(params.system, params.messages)
+  const convertedMessages = convertMessages(
+    params.system,
+    sanitizeMessagesForMalformedToolCalls(params.messages),
+  )
 
   const request: OpenAIChatCompletionRequest = {
     model: normalizeOpenAICompatModelForAPI(params.model),
