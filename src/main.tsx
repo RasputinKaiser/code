@@ -7,6 +7,7 @@
 //    sequentially via sync spawn inside applySafeConfigEnvironmentVariables()
 //    (~65ms on every macOS startup)
 import { profileCheckpoint, profileReport } from './utils/startupProfiler.js';
+import { cliPrintError, cliPrintWarn } from './utils/cliOutput.js';
 
 // eslint-disable-next-line custom-rules/no-top-level-side-effects
 profileCheckpoint('main_tsx_entry');
@@ -1081,8 +1082,7 @@ async function run(): Promise<CommanderCommand> {
     // Ignore "code" as a prompt - treat it the same as no prompt
     if (prompt === 'code') {
       logEvent('ncode_code_prompt_ignored', {});
-      // biome-ignore lint/suspicious/noConsole:: intentional console output
-      console.warn(chalk.yellow('Tip: You can launch Code with just `code`'));
+      cliPrintWarn(chalk.yellow('Tip: You can launch Code with just `code`'));
       prompt = undefined;
     }
 
@@ -1130,8 +1130,7 @@ async function run(): Promise<CommanderCommand> {
       agentId?: unknown;
     }).agentId && kairosGate) {
       if (!checkHasTrustDialogAccepted()) {
-        // biome-ignore lint/suspicious/noConsole:: intentional console output
-        console.warn(chalk.yellow('Assistant mode disabled: directory is not trusted. Accept the trust dialog and restart.'));
+        cliPrintWarn(chalk.yellow('Assistant mode disabled: directory is not trusted. Accept the trust dialog and restart.'));
       } else {
         // Blocking gate check — returns cached `true` instantly; if disk
         // cache is false/missing, lazily inits GrowthBook and fetches fresh
@@ -1640,8 +1639,7 @@ async function run(): Promise<CommanderCommand> {
         });
         logForDebugging(`[Code in Chrome] Error: ${error}`);
         logError(error);
-        // biome-ignore lint/suspicious/noConsole:: intentional console output
-        console.error(`Error: Failed to run with Code in Chrome.`);
+        cliPrintError(`Error: Failed to run with Code in Chrome.`);
         process.exit(1);
       }
     } else if (autoEnableClaudeInChrome) {
@@ -1857,8 +1855,7 @@ async function run(): Promise<CommanderCommand> {
 
     // Print any warnings from initialization
     warnings.forEach(warning => {
-      // biome-ignore lint/suspicious/noConsole:: intentional console output
-      console.error(warning);
+      cliPrintError(warning);
     });
     void assertMinVersion();
 
@@ -1909,21 +1906,18 @@ async function run(): Promise<CommanderCommand> {
     // NOTE: We do NOT call prefetchAllMcpResources here - that's deferred until after trust dialog
 
     if (inputFormat && inputFormat !== 'text' && inputFormat !== 'stream-json') {
-      // biome-ignore lint/suspicious/noConsole:: intentional console output
-      console.error(`Error: Invalid input format "${inputFormat}".`);
+      cliPrintError(`Error: Invalid input format "${inputFormat}".`);
       process.exit(1);
     }
     if (inputFormat === 'stream-json' && outputFormat !== 'stream-json') {
-      // biome-ignore lint/suspicious/noConsole:: intentional console output
-      console.error(`Error: --input-format=stream-json requires output-format=stream-json.`);
+      cliPrintError(`Error: --input-format=stream-json requires output-format=stream-json.`);
       process.exit(1);
     }
 
     // Validate sdkUrl is only used with appropriate formats (formats are auto-set above)
     if (sdkUrl) {
       if (inputFormat !== 'stream-json' || outputFormat !== 'stream-json') {
-        // biome-ignore lint/suspicious/noConsole:: intentional console output
-        console.error(`Error: --sdk-url requires both --input-format=stream-json and --output-format=stream-json.`);
+        cliPrintError(`Error: --sdk-url requires both --input-format=stream-json and --output-format=stream-json.`);
         process.exit(1);
       }
     }
@@ -1931,8 +1925,7 @@ async function run(): Promise<CommanderCommand> {
     // Validate replayUserMessages is only used with stream-json formats
     if (options.replayUserMessages) {
       if (inputFormat !== 'stream-json' || outputFormat !== 'stream-json') {
-        // biome-ignore lint/suspicious/noConsole:: intentional console output
-        console.error(`Error: --replay-user-messages requires both --input-format=stream-json and --output-format=stream-json.`);
+        cliPrintError(`Error: --replay-user-messages requires both --input-format=stream-json and --output-format=stream-json.`);
         process.exit(1);
       }
     }
@@ -4216,8 +4209,7 @@ async function run(): Promise<CommanderCommand> {
         setDirectConnectServerUrl(serverUrl);
         connectConfig = session.config;
       } catch (err) {
-        // biome-ignore lint/suspicious/noConsole: intentional error output
-        console.error(err instanceof DirectConnectError ? err.message : String(err));
+        cliPrintError(err instanceof DirectConnectError ? err.message : String(err));
         process.exit(1);
       }
       const {
